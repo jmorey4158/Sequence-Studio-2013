@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{47034D23-C63B-41BB-A8E3-95DC3119A633}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SequencePowerShell</RootNamespace>
+    <AssemblyName>RevealedDesigns.SequenceStudio.SequencePowerShell</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\WindowsPowerShell\Modules\RevealedDesigns.SequenceStudio.SequencePowerShell\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>C:\Users\jmorey\Desktop\Sequence Studio 2010\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReadyRelease|AnyCPU'">
+    <OutputPath>C:\Users\jmorey\Desktop\Sequence Studio 2010\bin\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Management.Automation" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cmdlets\Get-BestMatchesPercentage.cs" />
+    <Compile Include="Cmdlets\Get-CodonCount.cs" />
+    <Compile Include="Cmdlets\Get-CodonMatrix.cs" />
+    <Compile Include="Cmdlets\Get-CodonPercentage.cs" />
+    <Compile Include="Cmdlets\Get-CompStrand.cs" />
+    <Compile Include="Cmdlets\Get-ConsensusSourceSequence.cs" />
+    <Compile Include="Cmdlets\Get-ContiguousMatchSet.cs" />
+    <Compile Include="Cmdlets\Get-ContiguousOrfList.cs" />
+    <Compile Include="Cmdlets\Get-FibonacciPattern.cs" />
+    <Compile Include="Cmdlets\Get-FibonacciSeries.cs" />
+    <Compile Include="Cmdlets\Get-FirstStartCodon.cs" />
+    <Compile Include="Cmdlets\Get-LongestContiguousMatchRegions.cs" />
+    <Compile Include="Cmdlets\Get-LongestContiguousSelfMatch.cs" />
+    <Compile Include="Cmdlets\Get-LongestOrf.cs" />
+    <Compile Include="Cmdlets\Get-MatchGrid %28incomplete%29.cs" />
+    <Compile Include="Cmdlets\Get-MatchSequences.cs" />
+    <Compile Include="Cmdlets\Get-MatchSet.cs" />
+    <Compile Include="Cmdlets\Get-MolecularWeight.cs" />
+    <None Include="Obsolete Cmdlets\Get-MolWeight_v2.cs" />
+    <Compile Include="Cmdlets\Get-MolWeight.cs" />
+    <Compile Include="Cmdlets\Get-NumericalPattern.cs" />
+    <Compile Include="Cmdlets\Get-ORFList.cs" />
+    <Compile Include="Cmdlets\Get-PrimePattern.cs" />
+    <Compile Include="Cmdlets\Get-PrimeSeries.cs" />
+    <Compile Include="Cmdlets\New-RandomStrand.cs" />
+    <Compile Include="Cmdlets\Get-SelfMatch.cs" />
+    <Compile Include="Cmdlets\Get-Stats.cs" />
+    <Compile Include="Cmdlets\Get-Translation.cs" />
+    <Compile Include="Cmdlets\New-DNA.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cmdlets\New-Poly.cs" />
+    <Compile Include="Cmdlets\New-RNA.cs" />
+    <Compile Include="Cmdlets\Test-IsPrime.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <None Include="Obsolete Cmdlets\Get-MolWeight_OLDcs.cs" />
+    <Compile Include="SequencePowershellCmdlets.cs" />
+    <Compile Include="SequencePowerShell SnapIn.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\eFetch_gene\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\eFetch_seq\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\eFetch_taxon\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\eUtils\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SequencePowerShellHelp.xml" />
+    <None Include="app.config" />
+    <None Include="Service References\eFetch_taxon\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\eFetch_taxon\configuration.svcinfo" />
+    <None Include="Service References\eFetch_taxon\configuration91.svcinfo" />
+    <None Include="Service References\eFetch_gene\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\eFetch_gene\configuration.svcinfo" />
+    <None Include="Service References\eFetch_gene\configuration91.svcinfo" />
+    <None Include="Service References\eFetch_gene\efetch_db_gene.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\eFetch_gene\efetch_gene.wsdl" />
+    <None Include="Service References\eFetch_gene\efetch_gene.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\eFetch_gene\SequencePowerShell.eFetch_gene.eFetchResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\eFetch_seq\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\eFetch_seq\configuration.svcinfo" />
+    <None Include="Service References\eFetch_seq\configuration91.svcinfo" />
+    <None Include="Service References\eFetch_seq\efetch_db_seq.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\eFetch_seq\efetch_seq.wsdl" />
+    <None Include="Service References\eFetch_seq\efetch_seq.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\eFetch_seq\SequencePowerShell.eFetch_seq.eFetchResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\eFetch_taxon\efetch_db_taxon.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\eFetch_taxon\efetch_taxon.wsdl" />
+    <None Include="Service References\eFetch_taxon\efetch_taxon.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\eFetch_taxon\SequencePowerShell.eFetch_taxon.eFetchResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\eUtils\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\eUtils\configuration.svcinfo" />
+    <None Include="Service References\eUtils\configuration91.svcinfo" />
+    <None Include="Service References\eUtils\SequencePowerShell.eUtils.eInfoResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\eUtils\SequencePowerShell.eUtils.eLinkResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\eUtils\SequencePowerShell.eUtils.ePostResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\eUtils\SequencePowerShell.eUtils.eSearchResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\eUtils\SequencePowerShell.eUtils.eSpellResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\eUtils\SequencePowerShell.eUtils.eSummaryResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\eUtils\SequencePowerShell.eUtils.Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\eUtils\eutils.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\eFetch_gene\" />
+    <WCFMetadataStorage Include="Service References\eFetch_seq\" />
+    <WCFMetadataStorage Include="Service References\eFetch_taxon\" />
+    <WCFMetadataStorage Include="Service References\eUtils\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Helper\Helper.csproj">
+      <Project>{d26584e3-18a4-49dc-b248-94fc32624e18}</Project>
+      <Name>Helper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Internal\Internal.csproj">
+      <Project>{f414ee48-4ecc-4f36-b89d-0ad040c7b895}</Project>
+      <Name>Internal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Parsers\Parsers.csproj">
+      <Project>{18be35c9-e42d-44f5-aa08-7a042191e499}</Project>
+      <Name>Parsers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Search\Search.csproj">
+      <Project>{74c2d3a0-6726-48b4-968d-7a92b31c8ec6}</Project>
+      <Name>Search</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RevealedDesigns.SequenceStudio.Internal</name>
+    </assembly>
+    <members>
+        <member name="T:SequenceStudio.AminoAcids">
+            <summary>
+            This Class holds all the classes that define the amino acids and makes their info 
+            available to all Sequence Studio methods.
+            </summary>
+        </member>
+        <member name="M:SequenceStudio.AminoAcids.InitAminoAcids">
+            <summary>
+            Creates a set of Amino ACid class instances for use in other methods and classes
+            </summary>
+        </member>
+        <member name="M:SequenceStudio.AminoAcids.GetAminoAcidList">
+            <summary>
+            Returns a List(AminoAcidBase) of all the Amino Acid classes instances
+            </summary>
+        </member>
+        <member name="M:SequenceStudio.AminoAcids.GetCodonMatixTuple">
+            <summary>
+            Returns the CodonMatrix, a
+            list (of Tuple(string,string)) of all the codons for all amino acids
+            </summary>
+            <returns>List(Typle(string,string)) - the CodonMatrix</returns>
+        </member>
+        <member name="M:SequenceStudio.AminoAcids.GetCodonMatrix">
+            <summary>
+            Returns the CodonMatrix, a
+            Dictionary(string,string) of all the codons for all amino acids
+            </summary>
+            <returns>Dictionary(string,string) - the CodonMatrix</returns>
+        </member>
+        <member name="T:SequenceStudio.Internal.Regexes">
+            <summary>
+            These Strings are used in Parse() and Validate() methods. 
+            The function as Regex tempaltes
+            for the specific Sequence types and allow the code to determine 
+            the validity of the sequence.
+            They are also used as constants in various methods, such as Translate().
+            </summary>
+        </member>
+        <member name="T:SequenceStudio.SequenceBase">
+            <summary>
+            Base Class for the DNA, Poly, and RNA classes
+            </summary>
+            <remarks>Typically, you would use an instance of one of the derived classes, DNA, RNA, or Poly.</remarks>
+        </member>
+        <member name="M:SequenceStudio.SequenceBase.ValidateSequence(System.String,System.String)">
+            <summary>
+            Validateds that the input sequence is a valid Type of sequence.
+            </summary>
+            <param name="s">String - The input sequence string to validate.</param>
+            <param name="p">String - the pattern to validate the sequence agaisnt.</param>
+            <returns>Boolean - true if the validatio passed; false if not.</returns>
+            <remarks>this meothed is overridden in child classes that use type-specific patterns.</remarks>
+        </member>
+        <member name="M:SequenceStudio.SequenceBase.ToString">
+            <summary>
+            Overrides .NET ToString() method to properly format the class to a String.
+            </summary>
+            <returns>String - a formateted String of the class Properties.</returns>
+        </member>
+        <member name="M:SequenceStudio.SequenceBase.Copy">
+            <summary>
+            Creates a duplicate instance with a different ID.
+            </summary>
+            <returns>SequenceBase - the cloned instance.</returns>
+        </member>
+        <member name="P:SequenceStudio.SequenceBase.Enumeration">
+            <summary>
+            The Enumeration is derived from the NCBI enumeration property. It is used so that identitification
+            of sequences with the NCBI databases can be made.
+            </summary>
+        </member>
+        <member name="M:SequenceStudio.DNA.Copy">
+            <summary>
+            Creates a duplicate instance with a different ID.
+            </summary>
+            <returns>DNA - the cloned instance.</returns>
+        </member>
+        <member name="M:SequenceStudio.RNA.Copy">
+            <summary>
+            Creates a duplicate instance with a different ID.
+            </summary>
+            <returns>RNA - ther cloned instance.</returns>
+        </member>
+        <member name="M:SequenceStudio.Poly.Copy">
+            <summary>
+            Creates a duplicate instance with a different ID.
+            </summary>
+            <returns>Poly - ther cloned instance.</returns>
+        </member>
+        <member name="T:SequenceStudio.SequenceException">
+            <summary>
+            The base class for all Sequence.Exceptions
+            </summary>
+        </member>
+        <member name="T:SequenceStudio.Internal.Resource_Files.MessageStrings">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:SequenceStudio.Internal.Resource_Files.MessageStrings.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:SequenceStudio.Internal.Resource_Files.MessageStrings.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:SequenceStudio.Internal.Resource_Files.MessageStrings.DnaHelperMethods_Introns_NoIntrons">
+            <summary>
+              Looks up a localized string similar to No introns were found in the input DNA strand.
+            </summary>
+        </member>
+        <member name="P:SequenceStudio.Internal.Resource_Files.MessageStrings.DnaHelperMethods_Introns_NotRelated">
+            <summary>
+              Looks up a localized string similar to The input DNA strand is not the source strand for the input Polypeptide strand. The method cannot complete..
+            </summary>
+        </member>
+    </members>
+</doc>

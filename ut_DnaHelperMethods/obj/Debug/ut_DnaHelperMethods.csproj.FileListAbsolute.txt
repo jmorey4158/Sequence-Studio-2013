@@ -1,0 +1,22 @@
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\ut_DnaHelperMethods\bin\Debug\ut_DnaHelperMethods.dll
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\ut_DnaHelperMethods\bin\Debug\ut_DnaHelperMethods.pdb
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\ut_DnaHelperMethods\bin\Debug\RevealedDesigns.SequenceStudio.Helper.dll
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\ut_DnaHelperMethods\bin\Debug\RevealedDesigns.SequenceStudio.Internal.dll
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\ut_DnaHelperMethods\bin\Debug\RevealedDesigns.SequenceStudio.Search.dll
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\ut_DnaHelperMethods\bin\Debug\RevealedDesigns.SequenceStudio.Helper.pdb
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\ut_DnaHelperMethods\bin\Debug\RevealedDesigns.SequenceStudio.Internal.pdb
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\ut_DnaHelperMethods\bin\Debug\RevealedDesigns.SequenceStudio.Search.pdb
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\ut_DnaHelperMethods\obj\Debug\ut_DnaHelperMethods.csprojResolveAssemblyReference.cache
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\ut_DnaHelperMethods\obj\Debug\ut_DnaHelperMethods.dll
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\ut_DnaHelperMethods\obj\Debug\ut_DnaHelperMethods.pdb
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\ut_DnaHelperMethods\bin\Debug\ut_DnaHelperMethods.dll
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\ut_DnaHelperMethods\bin\Debug\ut_DnaHelperMethods.pdb
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\ut_DnaHelperMethods\bin\Debug\RevealedDesigns.SequenceStudio.Helper.dll
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\ut_DnaHelperMethods\bin\Debug\RevealedDesigns.SequenceStudio.Internal.dll
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\ut_DnaHelperMethods\bin\Debug\RevealedDesigns.SequenceStudio.Search.dll
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\ut_DnaHelperMethods\bin\Debug\RevealedDesigns.SequenceStudio.Helper.pdb
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\ut_DnaHelperMethods\bin\Debug\RevealedDesigns.SequenceStudio.Internal.pdb
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\ut_DnaHelperMethods\bin\Debug\RevealedDesigns.SequenceStudio.Search.pdb
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\ut_DnaHelperMethods\obj\Debug\ut_DnaHelperMethods.csprojResolveAssemblyReference.cache
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\ut_DnaHelperMethods\obj\Debug\ut_DnaHelperMethods.dll
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\ut_DnaHelperMethods\obj\Debug\ut_DnaHelperMethods.pdb

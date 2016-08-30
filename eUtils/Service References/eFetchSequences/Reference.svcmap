@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="069c7636-277d-466e-b4d2-c8decf6e2e28" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://www.ncbi.nlm.nih.gov/soap/v2.0/efetch_seq.wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="efetch_seq.xsd" MetadataType="Schema" ID="78236054-7b4d-42fd-aa28-9b6d4389c59f" SourceId="1" SourceUrl="http://eutils.ncbi.nlm.nih.gov/soap/v2.0/efetch_seq.xsd" />
+    <MetadataFile FileName="efetch_seq.wsdl" MetadataType="Wsdl" ID="475be2e7-e1f5-41d9-a4f9-e650ef64d993" SourceId="1" SourceUrl="http://eutils.ncbi.nlm.nih.gov/soap/v2.0/efetch_seq.wsdl" />
+    <MetadataFile FileName="efetch_db_seq.xsd" MetadataType="Schema" ID="53ff3194-1ba0-4726-a985-b3cc13c13fb1" SourceId="1" SourceUrl="http://eutils.ncbi.nlm.nih.gov/soap/v2.0/efetch_db_seq.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,9 @@
+cd "C:\Users\jmorey\Desktop\Sequence Studio 2010\SequenceMethods\PowerShellCmdlet1\bin\Debug"
+
+InstallUtil SequencePowerShell.dll
+
+
+
+import-module -name "C:\Users\jmorey\Documents\Visual Studio 2010\Projects\Sequence Studio 2010\SequenceMethods\PowerShellCmdlet1\bin\Debug\SequencePowerShell.dll" -verbose
+
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoLogo -NoExit -File "C:\Users\jmorey\Desktop\Sequence Studio 2010 PowerShell.ps1"

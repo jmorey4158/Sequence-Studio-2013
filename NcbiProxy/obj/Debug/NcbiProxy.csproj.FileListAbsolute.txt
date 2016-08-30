@@ -1,0 +1,4 @@
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\NcbiProxy\bin\NcbiProxy.dll
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\NcbiProxy\bin\NcbiProxy.pdb
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\NcbiProxy\obj\Debug\NcbiProxy.dll
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\NcbiProxy\obj\Debug\NcbiProxy.pdb

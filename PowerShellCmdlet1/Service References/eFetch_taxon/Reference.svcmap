@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="facb619d-f5e9-4228-85a4-bafcb01f5613" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://www.ncbi.nlm.nih.gov/entrez/eutils/soap/v2.0/efetch_taxon.wsdl " Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="efetch_db_taxon.xsd" MetadataType="Schema" ID="ec937465-868f-45b1-8f6a-38451297ab52" SourceId="1" SourceUrl="http://www.ncbi.nlm.nih.gov/entrez/eutils/soap/v2.0/efetch_db_taxon.xsd" />
+    <MetadataFile FileName="efetch_taxon.wsdl" MetadataType="Wsdl" ID="bb1c1b0a-4cdf-47f4-ad61-ae6b435671f7" SourceId="1" SourceUrl="http://www.ncbi.nlm.nih.gov/entrez/eutils/soap/v2.0/efetch_taxon.wsdl" />
+    <MetadataFile FileName="efetch_taxon.xsd" MetadataType="Schema" ID="c8b98bfb-3051-4584-9fd1-6e3b247da0ad" SourceId="1" SourceUrl="http://www.ncbi.nlm.nih.gov/entrez/eutils/soap/v2.0/efetch_taxon.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

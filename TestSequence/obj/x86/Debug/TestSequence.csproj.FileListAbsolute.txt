@@ -1,0 +1,15 @@
+E:\#DEVELOPMENT\Debug\TestSequence.exe.config
+E:\#DEVELOPMENT\Debug\TestSequence.exe
+E:\#DEVELOPMENT\Debug\TestSequence.pdb
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\Debug\TestSequence.exe.config
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\Debug\TestSequence.exe
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\Debug\TestSequence.pdb
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\TestSequence\obj\x86\Debug\TestSequence.csprojResolveAssemblyReference.cache
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\TestSequence\obj\x86\Debug\TestSequence.exe
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\TestSequence\obj\x86\Debug\TestSequence.pdb
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\Debug\TestSequence.exe.config
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\Debug\TestSequence.exe
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\Debug\TestSequence.pdb
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\TestSequence\obj\x86\Debug\TestSequence.csprojResolveAssemblyReference.cache
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\TestSequence\obj\x86\Debug\TestSequence.exe
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\TestSequence\obj\x86\Debug\TestSequence.pdb

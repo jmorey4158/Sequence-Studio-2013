@@ -1,0 +1,18 @@
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\Debug\RevealedDesigns.SequenceStudio.SequencePowerShell.dll.config
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\Debug\RevealedDesigns.SequenceStudio.SequencePowerShell.dll
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\Debug\RevealedDesigns.SequenceStudio.SequencePowerShell.pdb
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\PowerShellCmdlet1\obj\Debug\SequencePowerShell.csprojResolveAssemblyReference.cache
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\PowerShellCmdlet1\obj\Debug\RevealedDesigns.SequenceStudio.SequencePowerShell.dll
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\PowerShellCmdlet1\obj\Debug\RevealedDesigns.SequenceStudio.SequencePowerShell.pdb
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\Debug\RevealedDesigns.SequenceStudio.SequencePowerShell.dll.config
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\Debug\RevealedDesigns.SequenceStudio.SequencePowerShell.dll
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\Debug\RevealedDesigns.SequenceStudio.SequencePowerShell.pdb
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\WindowsPowerShell\Modules\SequenceStudio\RevealedDesigns.SequenceStudio.SequencePowerShell.dll.config
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\WindowsPowerShell\Modules\SequenceStudio\RevealedDesigns.SequenceStudio.SequencePowerShell.dll
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\WindowsPowerShell\Modules\SequenceStudio\RevealedDesigns.SequenceStudio.SequencePowerShell.pdb
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\PowerShellCmdlet1\obj\Debug\SequencePowerShell.csprojResolveAssemblyReference.cache
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\PowerShellCmdlet1\obj\Debug\RevealedDesigns.SequenceStudio.SequencePowerShell.dll
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\PowerShellCmdlet1\obj\Debug\RevealedDesigns.SequenceStudio.SequencePowerShell.pdb
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\WindowsPowerShell\Modules\RevealedDesigns.SequenceStudio.SequencePowerShell\RevealedDesigns.SequenceStudio.SequencePowerShell.dll.config
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\WindowsPowerShell\Modules\RevealedDesigns.SequenceStudio.SequencePowerShell\RevealedDesigns.SequenceStudio.SequencePowerShell.dll
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\WindowsPowerShell\Modules\RevealedDesigns.SequenceStudio.SequencePowerShell\RevealedDesigns.SequenceStudio.SequencePowerShell.pdb

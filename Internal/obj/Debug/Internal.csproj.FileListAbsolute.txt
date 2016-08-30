@@ -1,0 +1,16 @@
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\Debug\RevealedDesigns.SequenceStudio.Internal.dll
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\Debug\RevealedDesigns.SequenceStudio.Internal.pdb
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\Debug\Internal.XML
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\Internal\obj\Debug\SequenceStudio.Internal.Resource_Files.MessageStrings.resources
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\Internal\obj\Debug\Internal.csproj.GenerateResource.Cache
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\Internal\obj\Debug\RevealedDesigns.SequenceStudio.Internal.dll
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\Internal\obj\Debug\RevealedDesigns.SequenceStudio.Internal.pdb
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\Internal\obj\Debug\Internal.csprojResolveAssemblyReference.cache
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\TestPSValidationPerformance\Helper\RevealedDesigns.SequenceStudio.Internal.dll
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\TestPSValidationPerformance\Helper\RevealedDesigns.SequenceStudio.Internal.pdb
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\TestPSValidationPerformance\Helper\Internal.XML
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\Internal\obj\Debug\SequenceStudio.Internal.Resource_Files.MessageStrings.resources
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\Internal\obj\Debug\Internal.csproj.GenerateResource.Cache
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\Internal\obj\Debug\RevealedDesigns.SequenceStudio.Internal.dll
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\Internal\obj\Debug\RevealedDesigns.SequenceStudio.Internal.pdb
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\Internal\obj\Debug\Internal.csprojResolveAssemblyReference.cache

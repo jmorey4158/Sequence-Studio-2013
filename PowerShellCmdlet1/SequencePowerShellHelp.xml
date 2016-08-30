@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<helpItems xmlns="http://msh" schema="maml">
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>SequencePowerShellHelp</command:name>
+      <maml:description>
+        <maml:para>SequencePowerShellHelp</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para>Copyright (C) Revealed Designs, LLC 2013</maml:para>
+      </maml:copyright>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>PowerShellCmdlet_Help_XML1 description</maml:para>
+    </maml:description>
+  </command:command>
+</helpItems>

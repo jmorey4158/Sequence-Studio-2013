@@ -1,0 +1,901 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RevealedDesigns.SequenceStudio.Helper</name>
+    </assembly>
+    <members>
+        <member name="T:SequenceStudio.DnaMethods">
+            <summary>
+            These static methods provides ways of manipulating DNA-oriented data. With the exception of two methods, which
+            generate and return a DNA class instance, all methods require a DNA class instance.
+            </summary>
+        </member>
+        <member name="M:SequenceStudio.DnaMethods.CodonCount(SequenceStudio.DNA)">
+            <summary>
+            Counts all of the DNA codons in a DNA sequence.   
+            </summary>
+            <param name="s">DNA class instance - the DNA sequence to operate upon.</param>
+            <returns>Dictionary(String,Int32) - the list of the codond and number of instances in 
+            the <paramref name="s"/>.</returns>
+            <remarks>This methods instantiates a CodonMatrix and uses that to 
+            match with the <paramref name="s"/>.</remarks>
+        </member>
+        <member name="M:SequenceStudio.DnaMethods.CodonPercentage(SequenceStudio.DNA)">
+            <summary>
+            Calculates the percentage of the DNA codons in a DNA sequence. 
+            </summary>
+            <param name="s">DNA class instance - the DNA strand to operate upon.</param>
+            <returns>Dictionary(String,Int32) - the list of the codons and number of instances in 
+            the <paramref name="s"/>.</returns>
+            <remarks>This methods calls the CodonCount(Sequence s) method
+            and uses the resutls of that method to calculate the percentages.<paramref name="s"/>.</remarks>
+        </member>
+        <member name="M:SequenceStudio.DnaMethods.CodonMatrix(SequenceStudio.DNA)">
+            <summary>
+            CodonMatrix - generates the CodonMatrix for the given DNA sequence and returns it as a string.
+            </summary>
+            <param name="d">DNA class instance - passing a DNA rather than string ensures validity</param>
+            <returns>String - the CodonMatrix for the sequence</returns>
+            <remarks><para>The Condon Matrix is the seqential representation of the coding residues of 
+            the input <paramref name="d"/>. This method assumes that the iput DNA sequence is an 
+            open reading frame (ORFMethods). If the input sequence is not an open reading frame then the 
+            results might not be useful. The method will continue to the last codon on the sequence
+            including STOP codons. All 'ATG' codons are translated as a Met residue rather than a 
+            START codon.</para>
+            <para>This method returns a String. To obtain the CodonMatrix class instance, 
+            use AminoAcids.GetCodonMatrix().</para></remarks>
+        </member>
+        <member name="M:SequenceStudio.DnaMethods.CodonMatrix(SequenceStudio.DNA,System.String)">
+            <summary>
+            CodonMatrix - generates the CodonMatrix for the given DNA sequence. Displayes the results as a 
+            String with a separator <paramref name="sep"/> (for easier viewing).
+            </summary>
+            <param name="d">DNA class instance - passing a DNA rather than string ensures validity</param>
+            <param name="sep">String - the character(s) to use to separate the codons in the matrix output</param> 
+            <returns>String - the CodonMatrix for the sequence</returns>
+            <remarks><para>The Condon Matrix is the seqential representation of the coding residues of 
+            the input <paramref name="s"/>. This method assumes that the iput DNA sequence is an 
+            open reading frame (ORFMethods). If the input sequence is not an open reading frame then the 
+            results might not be useful. The method will continue to the last codon on the sequence
+            including STOP codons. All 'ATG' codons are translated as a Met residue rather than a 
+            START codon.</para>
+            <para>This method returns a String. To obtain the CodonMatrix class instance, 
+            use AminoAcids.GetCodonMatrix().</para></remarks>
+        </member>
+        <member name="M:SequenceStudio.DnaMethods.Transcribe(SequenceStudio.DNA)">
+            <summary>
+            Trascribes the input <paramref name="seq"/> DNA sequence into an RNA sequence.
+            </summary>
+            <param name="seq">Internal.DNA class instance - the DNA sequence to transcribe.</param>
+            <returns>String - the RNA sequence.</returns>
+        </member>
+        <member name="M:SequenceStudio.DnaMethods.Translate(SequenceStudio.DNA)">
+            <summary>
+            Translates the input <paramref name="seq"/> into a polypeptide strand and returns it as a String.
+            </summary>
+            <param name="d">Internal.DNA class instance - the DNA sequence to translate into poypeptide seuence.</param>
+            <returns>String - the polypeptide sequence in Inital format.</returns>
+            <remarks><para>This method processes the input sequence in groups of 3. 
+            If the input sequence is not equally divisible by 3 then the remaining letters will be ignored.
+            </para>
+            <para>IMPORTANT - This method does not validate that the input string is a DNA sequence. If 
+            another string is put in the results will be invalid.</para></remarks>
+        </member>
+        <member name="M:SequenceStudio.DnaMethods.TranslateAllReadingFrames(SequenceStudio.DNA)">
+            <summary>
+            Translates a given DNA strand into the simple reading fram at all 3 locations.
+            </summary>
+            <param name="d">DNA class instance</param>
+            <returns>String array of all three possible translation products.</returns>
+        </member>
+        <member name="M:SequenceStudio.DnaMethods.Stats(SequenceStudio.DNA)">
+            <summary>
+            Calculates the residue statistics of the input DNA strand.
+            </summary>
+            <param name="d">Internal.DNA - the input DNA strand.</param>
+            <returns>Dictionary(String,Int32) - the residue statistics of the input DNA strand.</returns>
+            <remarks>The residue statistics is a Dictionary of the residues (A,C,T,G) and the number of times that
+            residue appears in the sequence. 
+            For example a sequence 100 residues long might have A = 20, C = 22, C = 28, G = 30.</remarks>
+        </member>
+        <member name="M:SequenceStudio.DnaMethods.MolWeight(SequenceStudio.DNA)">
+            <summary>
+            Calcualtes the molecular weight, in Daltons, of a specific DNA sequence.
+            </summary>
+            <param name="stats">Dictioanry(String,Int32) - the residue staticits of the DNA sequence.</param>
+            <returns>Double - the molecualr weight, in Daltons, of the DNA sequence.</returns>
+        </member>
+        <member name="M:SequenceStudio.DnaMethods.CompStrand(SequenceStudio.DNA)">
+            <summary>
+            Calculates the complimentary for the input DNA strand.
+            </summary>
+            <param name="d">Internal.DNA class instance - the DNA strand.</param>
+            <returns>String - the complimentary strand.</returns>
+        </member>
+        <member name="M:SequenceStudio.DnaMethods.ReverseCompStrand(SequenceStudio.DNA)">
+            <summary>
+            Calculates the complimentary for the input DNA strand and then orients it in the same 
+            orientation as the input strand.
+            </summary>
+            <param name="d">Internal.DNA class instance - the DNA strand.</param>
+            <returns>String - the complimentary strand.</returns>
+        </member>
+        <member name="M:SequenceStudio.DnaMethods.GenerateRandomDopedStrand(System.Int32,System.String)">
+            <summary>
+            Generates a 'doped' random sequence of the type given of the given length.
+            </summary>
+            <param name="n">Int32 number of units in sequence</param>
+            <param name="pattern">String, type of sequence and units; use this to 'dope' the strand </param>
+            <returns>String, the returned semi-random sequence</returns>
+            <remarks><para>You can use this method to return any sequence type (e.g. DNA, RNA, or custom) by providing 
+            the pattern to use for building the strand. If you use the pattern 'ACTG' the method will produce a 
+            DNA strans with equal amounts of A, C, T, and G residues.</para> 
+            <para>You can also 'dope' the strand by 
+            providing a pattern that has more instances of a particular character in relation to the other characters. 
+            For example the pattern 'AAACTGG'
+            will produce a DNA sequence with 3 times as many A residues as T and C residues and twice as many
+            G residues as T and C residues. However, the pattern 'ACTGACTG'will produce the smae result as if 
+            you would have used 'ACTG'.</para>
+            <para>NOTE - this method doesa not perform any character checking 
+            and will return a sequence of any characters, the pattern determinig the outcome.</para>
+            </remarks>
+        </member>
+        <member name="M:SequenceStudio.DnaMethods.GenerateRandomDNAStrand(System.Int32)">
+            <summary>
+            Generates a random DNA sequence of the given length.
+            </summary>
+            <param name="n">Int32 number of units in sequence</param>
+            <param name="pattern">String, type of sequence and units; use this to 'dope' the strand </param>
+            <returns>String, the returned semi-random sequence</returns>
+        </member>
+        <member name="M:SequenceStudio.DnaMethods.Introns(SequenceStudio.DNA,SequenceStudio.Poly)">
+            <summary>
+            THIS METHOD IS NOT COMPLETE! 
+            
+            Finds all regions on the input DNA strand (<paramref name="d"/>) that do not code for 
+            the input polypeptide, <paramref name="poly"/>.
+            </summary>
+            <param name="d">DNA class instance - the DNA strand to find introns (non-coding regions) on.</param>
+            <param name="poly">PolyMethods class instance - the polypeptide to use as a template.</param>
+            <param name="message">String - any message that the method will raise during execution.</param>
+            <returns>Dictionary(Int32,Int32) - the list of introns as locus and length.</returns>
+            <remarks>Possible messages: </remarks>
+        </member>
+        <member name="T:SequenceStudio.FormatMethods">
+            <summary>
+            This class provides 8 methods that format a String[] that indicates the matches, or non-matches, between the 
+            following: DNA-DNA, RNA-RNA, Poly-Poly, or DNA-RNA
+            </summary>
+        </member>
+        <member name="M:SequenceStudio.FormatMethods.FormatMatchPattern(SequenceStudio.DNA,SequenceStudio.DNA)">
+            <summary>
+            Returns a String[] of [0] = first sequence, [2] = MatchGrid string, [3] = second sequence. The MatchGrid
+            string shows "_" for non-matches and "|" for matches.
+            </summary>
+            <param name="list">List(int) - list of all places on the <paramref name="strand"/> where the 
+            <paramref name="pattern"/> matches it.</param>
+            <param name="strand">DNA class instance - the sequence being matched to.</param>
+            <param name="pattern">DNA class instance - the sequence being matched.</param>
+            <returns>String[3] - [0] = first sequence, [2] = MatchGrid string, [3] = second sequence.</returns>
+            <remarks>The List(int) list must be the result of the MatchPattern() method . if it is not
+            the resulting MatchGrid string may be innaccurrate.</remarks>
+        </member>
+        <member name="M:SequenceStudio.FormatMethods.FormatMatchPattern(SequenceStudio.RNA,SequenceStudio.RNA)">
+            <summary>
+            Returns a String[] of [0] = first sequence, [2] = MatchGrid string, [3] = second sequence. The MatchGrid
+            string shows "_" for non-matches and "|" for matches.
+            </summary>
+            <param name="strand">RNA class instance - the sequence being matched to.</param>
+            <param name="pattern">RNA class instance - the sequence being matched.</param>
+            <returns>String[3] - [0] = first sequence, [2] = MatchGrid string, [3] = second sequence.</returns>
+            <remarks>The List(int) list must be the result of the MatchPattern() method . if it is not
+            the resulting MatchGrid string may be innaccurrate.</remarks>
+        </member>
+        <member name="M:SequenceStudio.FormatMethods.FormatMatchPattern(SequenceStudio.Poly,SequenceStudio.Poly)">
+            <summary>
+            Returns a String[] of [0] = first sequence, [2] = MatchGrid string, [3] = second sequence. The MatchGrid
+            string shows "_" for non-matches and "|" for matches.
+            </summary>
+            <param name="strand">Poly class instance - the sequence being matched to.</param>
+            <param name="pattern">Poly class instance - the sequence being matched.</param>
+            <returns>String[3] - [0] = first sequence, [2] = MatchGrid string, [3] = second sequence.</returns>
+            <remarks>The List(int) list must be the result of the MatchPattern() method . if it is not
+            the resulting MatchGrid string may be innaccurrate.</remarks>
+        </member>
+        <member name="M:SequenceStudio.FormatMethods.FormatMatchPattern(SequenceStudio.DNA,SequenceStudio.RNA)">
+            <summary>
+            Returns a String[] of [0] = first sequence, [2] = MatchGrid string, [3] = second sequence. The MatchGrid
+            string shows "_" for non-matches and "|" for matches.
+            </summary>
+            <param name="strand">DNA class instance - the sequence being matched to.</param>
+            <param name="pattern">RNA class instance - the sequence being matched.</param>
+            <returns>String[3] - [0] = first sequence, [2] = MatchGrid string, [3] = second sequence.</returns>
+            <remarks>The List(int) list must be the result of the MatchPattern() method . if it is not
+            the resulting MatchGrid string may be innaccurrate.</remarks>
+        </member>
+        <member name="M:SequenceStudio.FormatMethods.FormatNonMatchPattern(SequenceStudio.DNA,SequenceStudio.DNA)">
+            <summary>
+            Returns a String[] of [0] = first sequence, [2] = MatchGrid string, [3] = second sequence. The MatchGrid
+            string shows "X" for non-matches and " " for matches.
+            </summary>
+            <param name="list">List(int) - list of all places on the <paramref name="strand"/> where the 
+            <paramref name="pattern"/> does NOT match it.</param>
+            <param name="strand">DNA class instance - the sequence being matched to.</param>
+            <param name="pattern">DNA class instance - the sequence being matched.</param>
+            <returns>String[3] - [0] = first sequence, [2] = MatchGrid string, [3] = second sequence.</returns>
+            <remarks>The List(int) list must be the result of the MatchPattern() method . if it is not
+            the resulting MatchGrid string may be innaccurrate.</remarks>
+        </member>
+        <member name="M:SequenceStudio.FormatMethods.FormatNonMatchPattern(SequenceStudio.RNA,SequenceStudio.RNA)">
+            <summary>
+            Returns a String[] of [0] = first sequence, [2] = MatchGrid string, [3] = second sequence. The MatchGrid
+            string shows "X" for non-matches and " " for matches.
+            </summary>
+            <param name="strand">RNA class instance - the sequence being matched to.</param>
+            <param name="pattern">RNA class instance - the sequence being matched.</param>
+            <returns>String[3] - [0] = first sequence, [2] = MatchGrid string, [3] = second sequence.</returns>
+            <remarks>The List(int) list must be the result of the MatchPattern() method. if it is not
+            the resulting MatchGrid string may be innaccurrate.</remarks>
+        </member>
+        <member name="M:SequenceStudio.FormatMethods.FormatNonMatchPattern(SequenceStudio.Poly,SequenceStudio.Poly)">
+            <summary>
+            Returns a String[] of [0] = first sequence, [2] = MatchGrid string, [3] = second sequence. The MatchGrid
+            string shows "X" for non-matches and " " for matches.
+            </summary>
+            <param name="strand">Poly class instance - the sequence being matched to.</param>
+            <param name="pattern">Poly class instance - the sequence being matched.</param>
+            <returns>String[3] - [0] = first sequence, [2] = MatchGrid string, [3] = second sequence.</returns>
+            <remarks>The List(int) list must be the result of the MatchPattern() method. if it is not
+            the resulting MatchGrid string may be innaccurrate.</remarks>
+        </member>
+        <member name="M:SequenceStudio.FormatMethods.FormatNonMatchPattern(SequenceStudio.DNA,SequenceStudio.RNA)">
+            <summary>
+            Returns a String[] of [0] = first sequence, [2] = MatchGrid string, [3] = second sequence. The MatchGrid
+            string shows "X" for non-matches and " " for matches.
+            </summary>
+            <param name="strand">DNA class instance - the sequence being matched to.</param>
+            <param name="pattern">RNA class instance - the sequence being matched.</param>
+            <returns>String[3] - [0] = first sequence, [2] = MatchGrid string, [3] = second sequence.</returns>
+            <remarks>The List(int) list must be the result of the MatchPattern() method . if it is not
+            the resulting MatchGrid string may be innaccurrate.</remarks>
+        </member>
+        <member name="M:SequenceStudio.ORFMethods.GetLongestORF(SequenceStudio.DNA)">
+            <summary>
+            Returns the longest Open Reading Frame for the sequence, if there is one.
+            To get actual sequence of ORFMethods pass results to GenerateORFs().
+            </summary>
+            <param name="d">FASTASequence containing the sequence</param>
+            <returns>Dictionary(Int32, Int32) that is the longest ORFMethods locus and length.</returns>
+        </member>
+        <member name="M:SequenceStudio.ORFMethods.GetContiguousORFList(SequenceStudio.DNA,System.Int32)">
+            <summary>
+            Finds all the non-overlapping ORFs in the sequence and returns a list of their loci and lengths.
+            To get the actual sequnces of the ORFs pass the resutls to GenerateORFs().
+            </summary>
+            <param name="d">FASTASequence containing the sequence</param>
+            <param name="minLen">Int32 - the minimum length of ORFMethods to return.</param>
+            <returns>Dictionary(Int32, Int32) - list of the loci and lengths of the ORFs found.</returns>
+        </member>
+        <member name="M:SequenceStudio.ORFMethods.GenerateNonOverlappingORFs(System.Collections.Generic.Dictionary{System.Int32,System.Int32},SequenceStudio.DNA)">
+            <summary>
+            Returns Dictionary(Int32, String) the actiual ORFMethods sequences when given a list of
+            the locus and length, and the sequence that has the ORFs.
+            </summary>
+            <param name="list">Dictionary(Int32, Int32) - the list of locus / length pairs</param>
+            <param name="d">DNA class instance -  seq.Sequence is the DNA sequence on which the ORFs are found.</param>
+            <returns>Dictionary(Int32, String) - list of all ORFs on the DNA strand specified by the input list.</returns> 
+            <remarks>This method assumes that there ar no overlapping ORFs, that is there are no ORFs with the same 
+            starting point, or locus. If you need to generate the ORF sequences for ORFs with the same locus, use 
+            public static List(KeyValuePair(Int32, String)) GenerateORFs(List(KeyValuePair(Int32, Int32)) list, DNA seq.</remarks>
+        </member>
+        <member name="M:SequenceStudio.ORFMethods.FirstStart(SequenceStudio.DNA)">
+            <summary>
+            Finds the first START codon on the input DNA strand, <paramref name="d"/>.
+            </summary>
+            <param name="d">DNA class instance - The DNA strand.</param>
+            <returns>Int32 - the locus of the first START codon.</returns>
+        </member>
+        <member name="M:SequenceStudio.ORFMethods.GetORFList(SequenceStudio.DNA,System.Int32)">
+            <summary>
+            Finds all Open Reading Frames in the sequence of at least min length and returns a list of the locus and length.
+            To get the actual ORFMethods sequences, pass this.return to GenerateORFs().
+            </summary>
+            <param name="d">DNA class instance(s)</param>
+            <param name="min">Int32 - the minimum length for the ORFs; if min is greater than sequence length
+            the method returns a null.</param>
+            <returns>Dictionary(Int32, Int32) which is the list of locud and length of the valid ORFs.</returns>
+        </member>
+        <member name="M:SequenceStudio.ORFMethods.GenerateORFs(System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.Int32,System.Int32}},SequenceStudio.DNA)">
+            <summary>
+            Returns Dictionary(Int32, String) the actiual ORF DNA sequences when given a list of
+            the locus and length, and the sequence that has the ORFs.
+            </summary>
+            <param name="list">Dictionary(Int32, Int32) - the list of locus / length pairs</param>
+            <param name="seq">FASTASequnce struct -  seq.Sequence is the DNA sequence on which the ORFs are found.</param>
+            <returns>List(KeyValuePair(Int32, String)) - list of all ORFs on the DNA strand specified by the input list.</returns> 
+        </member>
+        <member name="M:SequenceStudio.ORFMethods.GenerateRandomORF(System.Int32)">
+            <summary>
+            Generates a random DNA class instance ORF of the given length.
+            </summary>
+            <param name="n">Int32 number of units in sequence</param>
+            <returns>String, the returned random sequence</returns>
+        </member>
+        <member name="M:SequenceStudio.ORFMethods.GenerateDopedRandomORF(System.Int32,SequenceStudio.DNA)">
+            <summary>
+            Generates a random DNA class instance ORF of the given length that is 'doped' with certain codon ratios
+            provided by the template.
+            </summary>
+            <param name="n">Int32 number of units in sequence</param>
+            <param name="template">DNA instance - the sequence that provides the template for 'doping' the 
+            generated ORF. The generated ORF will contain the specific codons in proportion to the number
+            of the codons present in 'template'.</param>
+            <returns>String, the returned random sequence</returns>
+        </member>
+        <member name="M:SequenceStudio.PolyMethods.Stats(SequenceStudio.Poly)">
+            <summary>
+            Calculates the residue statistics of the input Polypeptide.
+            </summary>
+            <param name="p">Poly class instance - the input Polypeptide.</param>
+            <returns>Dictionary(String,Int32) - the residue statistics of the input polypeptide.</returns>
+        </member>
+        <member name="M:SequenceStudio.PolyMethods.MolWeight(SequenceStudio.Poly)">
+            <summary>
+            Calcualtes the molecular weight, in Daltons, of a specific polypeptide using the residue statistics.
+            </summary>
+            <param name="p">Poly instance, the polypeptide.</param>
+            <returns>Double - the molecualr weight, in Daltons, of the polypeptide.</returns>
+        </member>
+        <member name="M:SequenceStudio.PolyMethods.GenerateRandomStrand(System.Int32)">
+            <summary>
+            Generates a random DNA sequence of the given length.
+            </summary>
+            <param name="n">Int32 number of units in sequence</param>
+            <returns>String, the returned semi-random sequence</returns>
+        </member>
+        <member name="M:SequenceStudio.PolyMethods.ConsensusSourceSequence(SequenceStudio.Poly)">
+            <summary>
+            Generates a consensus DNA source sequence for the input polypeptide
+            </summary>
+            <param name="poly">String, a valid polypeptide strand</param>
+            <returns>String, the consensus source sequence</returns>
+        </member>
+        <member name="M:SequenceStudio.RnaMethods.Translate(SequenceStudio.RNA)">
+            <summary>
+            Translates the input into a polypeptide strand (String).
+            </summary>
+            <param name="r">RNA class instance - the DNA sequence to translate into poypeptide seuence.</param>
+            <returns>String - the polypeptide sequence in Inital format.</returns>
+            <remarks>This method does not validate that the input string is a DNA sequence. If 
+            another string is put in the results will be invalid.</remarks>
+        </member>
+        <member name="M:SequenceStudio.RnaMethods.Stats(SequenceStudio.RNA)">
+            <summary>
+            Calculates the residue statistics of the input RNA strand.
+            </summary>
+            <param name="r">RNA - the input RNA strand.</param>
+            <returns>Dictionary(String,Int32) - the residue statistics of the input RNA strand.</returns>
+        </member>
+        <member name="M:SequenceStudio.RnaMethods.MolWeight(SequenceStudio.RNA)">
+            <summary>
+            Calcualtes the molecular weight, in Daltons, of a specific RNA sequence.
+            </summary>
+            <param name="r">RNA calss instance the RNA sequence.</param>
+            <returns>Double - the molecualr weight, in Daltons, of the RNA sequence.</returns>
+        </member>
+        <member name="M:SequenceStudio.RnaMethods.CompStrand(SequenceStudio.RNA)">
+            <summary>
+            Calculates the anti-strand for the input RNA strand.
+            </summary>
+            <param name="r">RNA class instance - the RNA strand.</param>
+            <returns>String - the anti-strand.</returns>
+        </member>
+        <member name="M:SequenceStudio.RnaMethods.GenerateRandomDopedStrand(System.Int32,System.String)">
+            <summary>
+            Generates a 'doped' random sequence of the type given of the given length
+            NOTE - this method will return a sequence of any type, the pattern determinig the outcome
+            </summary>
+            <param name="n">Int32 number of units in sequence</param>
+            <param name="pattern">String, type of sequence and units; use this to 'dope' the strand </param>
+            <returns>String, the returned semi-random sequence</returns>
+        </member>
+        <member name="M:SequenceStudio.RnaMethods.GenerateRandomStrand(System.Int32)">
+            <summary>
+            Generates a random sequence of the type given of the given length
+            NOTE - this method will return a sequence of any type, the pattern determinig the outcome
+            </summary>
+            <param name="n">Int32 number of units in sequence</param>
+            <returns>String, the returned semi-random sequence</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.MatchPercentage(SequenceStudio.DNA,SequenceStudio.DNA,System.Double)">
+            <summary>
+            Finds all instances of the <paramref name="pattern"/> found to at least the <paramref name="threshold"/> 
+            percentage match on the <paramref name="strand"/>.
+            </summary>
+            <param name="strand">DNA class instance - the strand to search for the pattern</param>
+            <param name="pattern">DNA class instance - the pattern to search for</param>
+            <param name="threshold">Double - the minimum percentage match that will be accpeted.</param>
+            <returns>Dictionary(Int32, Double) - the list of all matches.</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.MatchPercentage(SequenceStudio.RNA,SequenceStudio.RNA,System.Double)">
+            <summary>
+            Finds all instances of the <paramref name="pattern"/> found to at least the <paramref name="threshold"/> 
+            percentage match on the <paramref name="strand"/>.
+            </summary>
+            <param name="strand">RNA class instance - the strand to search for the pattern</param>
+            <param name="pattern">RNA class instance - the pattern to search for</param>
+            <param name="threshold">Double - the minimum percentage match that will be accpeted.</param>
+            <returns>Dictionary(Int32, Double) - the list of all matches.</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.MatchPercentage(SequenceStudio.Poly,SequenceStudio.Poly,System.Double)">
+            <summary>
+            Finds all instances of the <paramref name="pattern"/> found to at least the <paramref name="threshold"/> 
+            percentage match on the <paramref name="strand"/>.
+            </summary>
+            <param name="strand">Poly class instance - the strand to search for the pattern</param>
+            <param name="pattern">Poly class instance - the pattern to search for</param>
+            <param name="threshold">Double - the minimum percentage match that will be accpeted.</param>
+            <returns>Dictionary(Int32, Double) - the list of all matches, the locus of the start of the match and 
+            the percentage of the match.</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.MatchCount(SequenceStudio.DNA,SequenceStudio.DNA,System.Double)">
+            <summary>
+            Matches two DNA sequences and finds all segents that match to at least <paramref name="threshold"/>
+            percentage.
+            </summary>
+            <param name="strand">DNA class instance.</param>
+            <param name="pattern">DNA class instance.</param>
+            <param name="threshold">Double - the minimum percentage match that will be accpeted.</param>
+            <returns>Dictionary(Int32, Int32) - the list of all matches, the locus of the match and the length
+            of the match segment.</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.MatchCount(SequenceStudio.RNA,SequenceStudio.RNA,System.Double)">
+            <summary>
+            Matches two RNA sequences and finds all segents that match to at least <paramref name="threshold"/>
+            percentage.
+            </summary>
+            <param name="strand">RNA class instance.</param>
+            <param name="pattern">RNA class instance.</param>
+            <param name="threshold">Double - the minimum percentage match that will be accpeted.</param>
+            <returns>Dictionary(Int32, Int32) - the list of all matches, the locus of the match and the length
+            of the match segment.</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.MatchCount(SequenceStudio.Poly,SequenceStudio.Poly,System.Double)">
+            <summary>
+            Matches two Poly sequences and finds all segents that match to at least <paramref name="threshold"/>
+            percentage.
+            </summary>
+            <param name="strand">Poly class instance.</param>
+            <param name="pattern">Poly class instance.</param>
+            <param name="threshold">Double - the minimum percentage match that will be accpeted.</param>
+            <returns>Dictionary(Int32, Int32) - the list of all matches, the locus of the match and the length
+            of the match segment.</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.MatchCount(SequenceStudio.DNA,SequenceStudio.RNA,System.Double)">
+            <summary>
+            Matches DNA and RNA sequences and finds all segments that match to at least <paramref name="threshold"/>
+            percentage.
+            </summary>
+            <param name="strand">DNA class instance.</param>
+            <param name="pattern">RNA class instance.</param>
+            <param name="threshold">Double - the minimum percentage match that will be accpeted.</param>
+            <returns>Dictionary(Int32, Int32) - the list of all matches, the locus of the match and the length
+            of the match segment.</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.MatchGrid(SequenceStudio.DNA,SequenceStudio.DNA,System.Double)">
+            <summary>
+            Returns the actual sequence matches for the given sequences.</summary>
+            <param name="strand">DNA class instance - the sequence to be matched against.</param>
+            <param name="pattern">DNA class instance - the sequence to be matched against.</param>
+            <param name="threshold">Double - the percentage of match threshold.</param>
+            <returns>String[] - the set of string representing the actual matches on 
+            <paramref name="strand"/> when matches with <paramref name="pattern"/>.</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.MatchGrid(SequenceStudio.RNA,SequenceStudio.RNA,System.Double)">
+            <summary>
+            Returns the actual sequence matches for the given sequences.</summary>
+            <param name="strand">RNA class instance - the sequence to be matched against.</param>
+            <param name="pattern">RNA class instance - the sequence to be matched against.</param>
+            <param name="threshold">Double - the percentage of match threshold.</param>
+            <returns>String[] - the set of string representing the actual matches on 
+            <paramref name="strand"/> when matches with <paramref name="pattern"/>.</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.MatchGrid(SequenceStudio.Poly,SequenceStudio.Poly,System.Double)">
+            <summary>
+            Returns the actual sequence matches for the given sequences.</summary>
+            <param name="strand">Poly class instance - the sequence to be matched against.</param>
+            <param name="pattern">Poly class instance - the sequence to be matched against.</param>
+            <param name="threshold">Double - the percentage of match threshold.</param>
+            <returns>String[] - the set of string representing the actual matches on 
+            <paramref name="strand"/> when matches with <paramref name="pattern"/>.</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.MatchGrid(SequenceStudio.DNA,SequenceStudio.RNA,System.Double)">
+            <summary>
+            Returns the actual sequence matches for the given sequences.</summary>
+            <param name="strand">DNA class instance - the sequence to be matched against.</param>
+            <param name="pattern">RNA class instance - the sequence to be matched against.</param>
+            <param name="threshold">Double - the percentage of match threshold.</param>
+            <returns>String[] - the set of string representing the actual matches on 
+            <paramref name="strand"/> when matches with <paramref name="pattern"/>.</returns>
+            <remarks>THe methods transcribes the RNA strand into a DNA strand and reports 
+            the results in reference to the DNA strand.</remarks>
+        </member>
+        <member name="M:SequenceStudio.Search.NonMatchPattern(SequenceStudio.DNA,SequenceStudio.DNA)">
+            <summary>
+            Finds all places on the <paramref name="strand"/> that do not match the <paramref name="pattern"/>.
+            </summary>
+            <param name="strand">DNA class instance - the strand to perform the match on.</param>
+            <param name="pattern">DNA class instance - the pattern to match.</param>
+            <returns>List(Int32) - the list of all loci on the <paramref name="strand"/> 
+            that does not match the <paramref name="pattern"/>.</returns>
+            <remarks>this method does not perform aligment.</remarks>
+        </member>
+        <member name="M:SequenceStudio.Search.NonMatchPattern(SequenceStudio.RNA,SequenceStudio.RNA)">
+            <summary>
+            Finds all places on the <paramref name="strand"/> that do not match the <paramref name="pattern"/>.
+            </summary>
+            <param name="strand">RNA class instance - the strand to perform the match on.</param>
+            <param name="pattern">RNA class instance - the pattern to match.</param>
+            <returns>List(Int32) - the list of all loci on the <paramref name="strand"/> 
+            that does not match the <paramref name="pattern"/>.</returns>
+            <remarks>this method does not perform aligment.</remarks>
+        </member>
+        <member name="M:SequenceStudio.Search.NonMatchPattern(SequenceStudio.Poly,SequenceStudio.Poly)">
+            <summary>
+            Finds all places on the <paramref name="strand"/> that do not match the <paramref name="pattern"/>.
+            </summary>
+            <param name="strand">Poly class instance - the strand to perform the match on.</param>
+            <param name="pattern">Poly class instance - the pattern to match.</param>
+            <returns>List(Int32) - the list of all loci on the <paramref name="strand"/> 
+            that does not match the <paramref name="pattern"/>.</returns>
+            <remarks>this method does not perform aligment.</remarks>
+        </member>
+        <member name="M:SequenceStudio.Search.NonMatchPattern(SequenceStudio.DNA,SequenceStudio.RNA)">
+            <summary>
+            Finds all places on the <paramref name="strand"/> that do not match the <paramref name="pattern"/>.
+            </summary>
+            <param name="strand">DNA class instance - the strand to perform the match on.</param>
+            <param name="pattern">RNA class instance - the pattern to match.</param>
+            <returns>List(Int32) - the list of all loci on the <paramref name="strand"/> 
+            that does not match the <paramref name="pattern"/>.</returns>
+            <remarks>this method does not perform aligment.</remarks>
+        </member>
+        <member name="M:SequenceStudio.Search.MatchPattern(SequenceStudio.DNA,SequenceStudio.DNA)">
+            <summary>
+            Finds all places on the <paramref name="strand"/> that match the <paramref name="pattern"/>.
+            </summary>
+            <param name="strand">DNA class instance - the strand to perform the match on.</param>
+            <param name="pattern">DNA class instance - the pattern to match.</param>
+            <returns>List(Int32) - the list of all loci on the <paramref name="strand"/> 
+            that does not match the <paramref name="pattern"/>.</returns>
+            <remarks>this method does not perform aligment.</remarks>
+        </member>
+        <member name="M:SequenceStudio.Search.MatchPattern(SequenceStudio.RNA,SequenceStudio.RNA)">
+            <summary>
+            Finds all places on the <paramref name="strand"/> that match the <paramref name="pattern"/>.
+            </summary>
+            <param name="strand">RNA class instance - the strand to perform the match on.</param>
+            <param name="pattern">RNA class instance - the pattern to match.</param>
+            <returns>List(Int32) - the list of all loci on the <paramref name="strand"/> 
+            that does not match the <paramref name="pattern"/>.</returns>
+            <remarks>this method does not perform aligment.</remarks>
+        </member>
+        <member name="M:SequenceStudio.Search.MatchPattern(SequenceStudio.Poly,SequenceStudio.Poly)">
+            <summary>
+            Finds all places on the <paramref name="strand"/> that match the <paramref name="pattern"/>.
+            </summary>
+            <param name="strand">Poly class instance - the strand to perform the match on.</param>
+            <param name="pattern">Poly class instance - the pattern to match.</param>
+            <returns>List(Int32) - the list of all loci on the <paramref name="strand"/> 
+            that does not match the <paramref name="pattern"/>.</returns>
+            <remarks>this method does not perform aligment.</remarks>
+        </member>
+        <member name="M:SequenceStudio.Search.MatchPattern(SequenceStudio.DNA,SequenceStudio.RNA)">
+            <summary>
+            Finds all places on the <paramref name="strand"/> that match the <paramref name="pattern"/>.
+            </summary>
+            <param name="strand">DNA class instance - the strand to perform the match on.</param>
+            <param name="pattern">RNA class instance - the pattern to match.</param>
+            <returns>List(Int32) - the list of all loci on the <paramref name="strand"/> 
+            that does not match the <paramref name="pattern"/>.</returns>
+            <remarks>this method does not perform aligment.</remarks>
+        </member>
+        <member name="M:SequenceStudio.Search.LongestContiguousMatchRegions(SequenceStudio.DNA,SequenceStudio.DNA)">
+            <summary>
+            Finds the longest region along the <paramref name="strand"/> that matches the <paramref name="pattern"/>.
+            </summary>
+            <param name="strand">DNA class instance - the strand to match on.</param>
+            <param name="pattern">DNA class instance - the pattern to match.</param>
+            <returns>Dictionary(Int32, Int32) - the locus and length of the longest match region. If thre are 
+            multiple match regions witht he same length, they will all be returned.</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.LongestContiguousMatchRegions(SequenceStudio.RNA,SequenceStudio.RNA)">
+            <summary>
+            Finds the longest region along the <paramref name="strand"/> that matches the <paramref name="pattern"/>.
+            </summary>
+            <param name="strand">RNA class instance - the strand to match on.</param>
+            <param name="pattern">RNA class instance - the pattern to match.</param>
+            <returns>Dictionary(Int32, Int32) - the locus and length of the longest match region. If thre are 
+            multiple match regions witht he same length, they will all be returned.</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.LongestContiguousMatchRegions(SequenceStudio.Poly,SequenceStudio.Poly)">
+            <summary>
+            Finds the longest region along the <paramref name="strand"/> that matches the <paramref name="pattern"/>.
+            </summary>
+            <param name="strand">Poly class instance - the strand to match on.</param>
+            <param name="pattern">Poly class instance - the pattern to match.</param>
+            <returns>Dictionary(Int32, Int32) - the locus and length of the longest match region. If thre are 
+            multiple match regions witht he same length, they will all be returned.</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.LongestContiguousNonMatchRegions(SequenceStudio.DNA,SequenceStudio.DNA)">
+            <summary>
+            Finds the region of non-matches on the <paramref name="strand"/> with the <paramref name="pattern"/>.
+            </summary>
+            <param name="strand">DNA class instance - the strand to match on.</param>
+            <param name="pattern">DNA class instance - the pattern to match.</param>
+            <returns>Dictionary(Int32, Int32) - the locus and length of the longest non-match region. If thre are 
+            multiple match regions witht he same length, they will all be returned.</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.LongestContiguousNonMatchRegions(SequenceStudio.RNA,SequenceStudio.RNA)">
+            <summary>
+            Finds the region of non-matches on the <paramref name="strand"/> with the <paramref name="pattern"/>.
+            </summary>
+            <param name="strand">RNA class instance - the strand to match on.</param>
+            <param name="pattern">RNA class instance - the pattern to match.</param>
+            <returns>Dictionary(Int32, Int32) - the locus and length of the longest non-match region. If thre are 
+            multiple match regions witht he same length, they will all be returned.</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.LongestContiguousNonMatchRegions(SequenceStudio.Poly,SequenceStudio.Poly)">
+            <summary>
+            Finds the region of non-matches on the <paramref name="strand"/> with the <paramref name="pattern"/>.
+            </summary>
+            <param name="strand">Poly class instance - the strand to match on.</param>
+            <param name="pattern">Poly class instance - the pattern to match.</param>
+            <returns>Dictionary(Int32, Int32) - the locus and length of the longest non-match region. If thre are 
+            multiple match regions witht he same length, they will all be returned.</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.ContiguousMatchRegions(SequenceStudio.DNA,SequenceStudio.DNA,System.Double)">
+            <summary>
+            Finds the longest contiguous match regions between two sequences. Two Strings are 
+            passed in: (1) sequence and (2) pattern. This method returns all matches over the 'threashold'.
+            </summary>
+            <dependencies>
+            This Method also calls the following Methods:
+            BestMatchesPercentage();
+            ValuesDescending();
+            </dependencies>
+            <param name="strand">DNA class instance - the sequence to be matched against</param>
+            <param name="pattern">DNA class instance - the pattern to match agasint the sequence.</param>
+            <param name="threshold">Double - the percentage at or above which a match is recorded.</param>
+            <returns name="matches">Dictionary(Int32 loc, Double percentage)- The list of matches.</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.ContiguousMatchRegions(SequenceStudio.RNA,SequenceStudio.RNA,System.Double)">
+            <summary>
+            Finds the longest contiguous match regions between two sequences. Two Strings are 
+            passed in: (1) sequence and (2) pattern. This method returns all matches over the 'threashold'.
+            </summary>
+            <dependencies>
+            This Method also calls the following Methods:
+            BestMatchesPercentage();
+            ValuesDescending();
+            </dependencies>
+            <param name="strand">RNA class instance - the sequence to be matched against</param>
+            <param name="pattern">RNA class instance - the pattern to match agasint the sequence.</param>
+            <param name="threshold">Double - the percentage at or above which a match is recorded.</param>
+            <returns name="matches">Dictionary(Int32 loc, Double percentage)- The list of matches.</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.ContiguousMatchRegions(SequenceStudio.Poly,SequenceStudio.Poly,System.Double)">
+            <summary>
+            Finds the longest contiguous match regions between two sequences. Two Strings are 
+            passed in: (1) sequence and (2) pattern. This method returns all matches over the 'threashold'.
+            </summary>
+            <dependencies>
+            This Method also calls the following Methods:
+            BestMatchesPercentage();
+            ValuesDescending();
+            </dependencies>
+            <param name="strand">Poly class instance - the sequence to be matched against</param>
+            <param name="pattern">Poly class instance - the pattern to match agasint the sequence.</param>
+            <param name="threshold">Double - the percentage at or above which a match is recorded.</param>
+            <returns name="matches">Dictionary(Int32 loc, Double percentage)- The list of matches.</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.SelfMatchSet(SequenceStudio.DNA,System.Double)">
+            <summary>
+            Finds all self-matches by percentage on a given sequence. 
+            The sequence is 'folded' back over itself and 
+            matches are searched for between the sequence and its Reverse sequence.
+            </summary>
+            <dependencies>
+            This Method also calls the following Methods:
+            MatchSet();
+            </dependencies>
+            <param name="strand">DNA class instance - the sequence to be matched against</param>
+            <param name="threshold">The percentage to stop matching at.</param>
+            <returns>Dictionary(Int32, Double)- the list of matches found that are >= the threshold.</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.SelfMatchSet(SequenceStudio.RNA,System.Double)">
+            <summary>
+            Finds all self-matches by percentage on a given sequence. 
+            The sequence is 'folded' back over itself and 
+            matches are searched for between the sequence and its Reverse sequence.
+            </summary>
+            <dependencies>
+            This Method also calls the following Methods:
+            MatchSet();
+            </dependencies>
+            <param name="strand">RNA class instance - the sequence to be matched against</param>
+            <param name="threshold">The percentage to stop matching at.</param>
+            <returns>Dictionary(Int32, Double)- the list of matches found that are >= the threshold.</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.SelfMatchSet(SequenceStudio.Poly,System.Double)">
+            <summary>
+            Finds all self-matches by percentage on a given sequence. 
+            The sequence is 'folded' back over itself and 
+            matches are searched for between the sequence and its Reverse sequence.
+            </summary>
+            <dependencies>
+            This Method also calls the following Methods:
+            MatchSet();
+            </dependencies>
+            <param name="strand">Poly class instance - the sequence to be matched against</param>
+            <param name="threshold">The percentage to stop matching at.</param>
+            <returns>Dictionary(Int32, Double)- the list of matches found that are >= the threshold.</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.LongestContiguousSelfMatch(SequenceStudio.DNA)">
+            <summary>
+            Finds anywhere along the sequence's own length that it can match to itself 
+            and determines the longest contiguous area of this match.
+            </summary>
+            <remarks>This function builds a backwards strand equal to half the strand length and then runs 
+            LongestContiguousMatchRegions(sequence, pattern) with the sequence and the backwards strand.</remarks>
+            <dependencies>
+            This Methods also calls the following Methods:
+            LongestContiguousMatchRegion();
+            </dependencies>
+            <param name="strand">DNA class instance - the sequence to be matched against itself.</param>
+            <returns>ref Dictionary(Int32, Int32)- the list of starting point and length ofmatches found.</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.LongestContiguousSelfMatch(SequenceStudio.RNA)">
+            <summary>
+            Finds anywhere along the sequence's own length that it can match to itself 
+            and determines the longest contiguous area of this match.
+            </summary>
+            <remarks>This function builds a backwards strand equal to half the strand length and then runs 
+            LongestContiguousMatchRegions(sequence, pattern) with the sequence and the backwards strand.</remarks>
+            <dependencies>
+            This Methods also calls the following Methods:
+            LongestContiguousMatchRegion();
+            </dependencies>
+            <param name="strand">RNA class instance - the sequence to be matched against itself.</param>
+            <returns>ref Dictionary(Int32, Int32)- the list of starting point and length ofmatches found.</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.LongestContiguousSelfMatch(SequenceStudio.Poly)">
+            <summary>
+            Finds anywhere along the sequence's own length that it can match to itself 
+            and determines the longest contiguous area of this match.
+            </summary>
+            <remarks>This function builds a backwards strand equal to half the strand length and then runs 
+            LongestContiguousMatchRegions(sequence, pattern) with the sequence and the backwards strand.</remarks>
+            <dependencies>
+            This Methods also calls the following Methods:
+            LongestContiguousMatchRegion();
+            </dependencies>
+            <param name="strand">Poly class instance - the sequence to be matched against itself.</param>
+            <returns>ref Dictionary(Int32, Int32)- the list of starting point and length ofmatches found.</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.MatchInterval(SequenceStudio.DNA,SequenceStudio.DNA,System.Collections.Generic.List{System.Int32},System.Double)">
+            <summary>
+            Finds all matches by percentage at a given interval between two Strings. 
+            If the match of 'threashold' percent is at a given interval then it is recorded.
+            </summary>
+            <param name="strand">DNA class instance - the sequence to be matched against</param>
+            <param name="pattern">DNA class instance - the pattern to match agasint the sequence.</param>
+            <param name="threshold">The percentage at which a match is recorded.</param>
+            <param name="interval">List(Int32) a list of intervals between this match and the next one.</param>
+            <returns>Dictionary(Int32, Int32)- the list of matches found that are => the threshold.</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.MatchInterval(SequenceStudio.RNA,SequenceStudio.RNA,System.Collections.Generic.List{System.Int32},System.Double)">
+            <summary>
+            Finds all matches by percentage at a given interval between two Strings. 
+            If the match of 'threashold' percent is at a given interval then it is recorded.
+            </summary>
+            <param name="strand">RNA class instance - the sequence to be matched against</param>
+            <param name="pattern">RNA class instance - the pattern to match agasint the sequence.</param>
+            <param name="threshold">The percentage at which a match is recorded.</param>
+            <param name="interval">List(Int32) a list of intervals between this match and the next one.</param>
+            <returns>Dictionary(Int32, Int32)- the list of matches found that are => the threshold.</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.MatchInterval(SequenceStudio.Poly,SequenceStudio.Poly,System.Collections.Generic.List{System.Int32},System.Double)">
+            <summary>
+            Finds all matches by percentage at a given interval between two Strings. 
+            If the match of 'threashold' percent is at a given interval then it is recorded.
+            </summary>
+            <param name="strand">Poly class instance - the sequence to be matched against</param>
+            <param name="pattern">Poly class instance - the pattern to match agasint the sequence.</param>
+            <param name="threshold">The percentage at which a match is recorded.</param>
+            <param name="interval">List(Int32) a list of intervals between this match and the next one.</param>
+            <returns>Dictionary(Int32, Int32)- the list of matches found that are => the threshold.</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.Repeats(SequenceStudio.DNA,System.Int32)">
+            <summary>
+            Finds all places on the strand where the sequence of 'length' units long repeats on the strand.
+            </summary>
+            <dependencies>
+            This Method also calls the following Methods:
+            MatchSet();
+            </dependencies>
+            <param name="strand">DNA class instance - the sequence to be matched against</param>
+            <param name="length">UInt32 - the length of pattern to search on.</param>
+            <returns>Dictionary(Int32, Int32) - the set of matches that 
+            meets the criteria. The list entries are the location where the match starts and the length of the match.</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.Repeats(SequenceStudio.DNA,System.Int32,System.Double)">
+            <summary>
+            Finds all places on the strand where the sequence of 'length' units long repeats on the strand.
+            </summary>
+            <dependencies>
+            This Method also calls the following Methods:
+            MatchSet();
+            </dependencies>
+            <param name="strand">DNA class instance - the sequence to be matched against</param>
+            <param name="length">UInt32 - the length of pattern to search on.</param>
+            <param name="threshold">Double - the percentage match threshold to record matches.</param> 
+            <returns>Dictionary(Int32, Int32) - the set of matches that meets the criteria. 
+            The list entries are the location where the match starts and the length of the match.</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.Repeats(SequenceStudio.RNA,System.Int32)">
+            <summary>
+            Finds all places on the strand where the sequence of 'length' units long repeats on the strand.
+            </summary>
+            <dependencies>
+            This Method also calls the following Methods:
+            MatchSet();
+            </dependencies>
+            <param name="strand">RNA class instance - the sequence to be matched against</param>
+            <param name="length">UInt32 - the length of pattern to search on.</param>
+            <returns>Dictionary(Int32, Int32) - the set of matches that 
+            meets the criteria. The list entries are the location where the match starts and the length of the match.</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.Repeats(SequenceStudio.RNA,System.Int32,System.Double)">
+            <summary>
+            Finds all places on the strand where the sequence of 'length' units long repeats on the strand.
+            </summary>
+            <dependencies>
+            This Method also calls the following Methods:
+            MatchSet();
+            </dependencies>
+            <param name="strand">RNA class instance - the sequence to be matched against</param>
+            <param name="length">UInt32 - the length of pattern to search on.</param>
+            <param name="threshold">Double - the percentage match threshold to record matches.</param> 
+            <returns>Dictionary(Int32, Int32) - the set of matches that meets the criteria. 
+            The list entries are the location where the match starts and the length of the match.</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.Repeats(SequenceStudio.Poly,System.Int32)">
+            <summary>
+            Finds all places on the strand where the sequence of 'length' units long repeats on the strand.
+            </summary>
+            <dependencies>
+            This Method also calls the following Methods:
+            MatchSet();
+            </dependencies>
+            <param name="strand">Poly class instance - the sequence to be matched against</param>
+            <param name="length">UInt32 - the length of pattern to search on.</param>
+            <returns>Dictionary(Int32, Int32) - the set of matches that 
+            meets the criteria. The list entries are the location where the match starts and the length of the match.</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.Repeats(SequenceStudio.Poly,System.Int32,System.Double)">
+            <summary>
+            Finds all places on the strand where the sequence of 'length' units long repeats on the strand.
+            </summary>
+            <dependencies>
+            This Method also calls the following Methods:
+            MatchSet();
+            </dependencies>
+            <param name="strand">Poly class instance - the sequence to be matched against</param>
+            <param name="length">UInt32 - the length of pattern to search on.</param>
+            <param name="threshold">Double - the percentage match threshold to record matches.</param> 
+            <returns>Dictionary(Int32, Int32) - the set of matches that meets the criteria. 
+            The list entries are the location where the match starts and the length of the match.</returns>
+        </member>
+    </members>
+</doc>

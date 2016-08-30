@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RevealedDesigns.SequenceStudio.Parsers</name>
+    </assembly>
+    <members>
+        <member name="M:SequenceStudio.Parsers.AAParsers.ParsePoly(System.String,System.Collections.Generic.Dictionary{System.Int32,System.String}@)">
+            <summary>
+            Creates a List(Polypeptide) from a string output from ReadFASTAFile()
+            NOTE - calls CleansePoly(String inStr) to rid records of 'bad' parts that break parsing
+            </summary>
+            <param name="seq">String, the output of the ReadFASTAFile() method</param>
+            <param name="errors">Dictionary(Int32, String) - a list of location (i.e. record no.) and the data that 
+             caused some parsiing error. This list can be examined and new 'bad parts' added to CleansePoly(String inStr)</param>
+            <returns>List(FASTASequence)</returns>
+        </member>
+        <member name="M:SequenceStudio.Parsers.CreateDatabase.TableCommand(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            Returns a SQLCommand String that can be used to create a customized Table.
+            Two variants:
+             (String tblName, List(String) items) - pass in a list of the Constants.ct_X Strings to create a cusomt DB
+             (String tblName, String items) - pass in a pre-designed Constants.db_X String.
+            </summary>
+            <param name="tblName">String = name of the Table. If a Table with the name already exits the method fails silently.</param>
+            <param name="items">
+             Two variants:
+             (String tblName, List(String) items) - pass in a list of the Constants.ct_X Strings to create a cusomt DB
+             (String tblName, String items) - pass in a pre-designed Constants.db_X String
+            </param>
+            <returns>String - to be used as a SQLCOmmand(String)</returns>
+        </member>
+        <member name="M:SequenceStudio.Parsers.CreateDatabase.CreateCustomTable(System.String,System.String)">
+            <summary>
+            Creates a customized Table in the DB specified in sconn, with the schema specified by schema
+            </summary>
+            <param name="sconn">String - connection string used in SQLConnection(String)</param>
+            <param name="schema">String - used in SQLCommand(String) to CREATE TABLE....</param>
+            <returns>Ture if Table is created; false otherwise</returns>
+        </member>
+        <member name="M:SequenceStudio.Parsers.BaseParser.ReadFASTAFile(System.String)">
+            <summary>
+            Reads a downloaded FASTA (****.nt) file into memory and renders it as a string
+            </summary>
+            <param name="path">String, valid path to a *.nt file</param>
+            <returns>String, the entire file as a valid string</returns>
+            <remarks>Typically, the results of this method are passed to the ParseSequence method.</remarks>
+        </member>
+        <member name="M:SequenceStudio.Parsers.BaseParser.ParseSequence(System.String,System.Collections.Generic.Dictionary{System.Int32,System.String}@)">
+            <summary>
+            Creates a List(SequenceBase) from a string output from ReadFASTAFile()
+            </summary>
+            <param name="seq">String, the output of the ReadFASTAFile() method</param>
+            <returns>List(SequenceBase)</returns>
+        </member>
+        <member name="M:SequenceStudio.Parsers.FASTAparser.ReadFASTAFile(System.String)">
+            <summary>
+            Reads a downloaded FASTA (****.nt) file into memory and renders it as a string
+            </summary>
+            <param name="path">String, valid path to a *.nt file</param>
+            <returns>String, the entire file as a valid string</returns>
+            <remarks>Typically, the results of this method are passed to the ParseFASTASequence method.</remarks>
+        </member>
+        <member name="M:SequenceStudio.Parsers.FASTAparser.ParseFASTASequence(System.String,System.Collections.Generic.Dictionary{System.Int32,System.String}@)">
+            <summary>
+            Creates a List(DNA) from a string output from ReadFASTAFile()
+            </summary>
+            <param name="seq">String, the uotput of the ReadFASTAFile() method</param>
+            <returns>List(DNA)</returns>
+        </member>
+        <member name="M:SequenceStudio.Parsers.FASTAparser.ParseFASTASequenceSimple(System.String)">
+            <summary>
+            Creates a List(DNA) from a string output from ReadFASTAFile().
+            This class instances are simplified as a fall-back for parsing errors.
+            </summary>
+            <param name="seq">String, the output of the ReadFASTAFile() method</param>
+            <returns>List(DNA)</returns>
+        </member>
+        <member name="M:SequenceStudio.Search.SearchMethods.SearchOrganism(System.String,System.String,System.Collections.Generic.List{SequenceStudio.DNA}@)">
+            <summary>
+            Searches a list of FASTA sequences for an organsim entry that matches the input string.
+            The method uses a path to an XML file of Classes and creates and in-memory list
+            of FASTASequence obljects.
+            </summary>
+            <param name="term">a string to search for</param>
+            <param name="inFile">full path to the XML file to search</param>
+            <param name="sl">List(FASTASequence) that is returned with matches, if any</param>
+        </member>
+        <member name="M:SequenceStudio.Search.SearchMethods.SearchDescription(System.String,System.String,System.Collections.Generic.List{SequenceStudio.DNA}@)">
+            <summary>
+            Searches a list of FASTA sequences for a description entry that matches the input string.
+            The method uses a path to an XML file of FASTASequence Classes and creates and in-memory list
+            of FASTASequence obljects.
+            </summary>
+            <param name="term">a string to search for</param>
+            <param name="inFile">full path to the XML file to search</param>
+            <param name="sl">List(FASTASequence) that is returned with matches, if any</param>
+        </member>
+        <member name="M:SequenceStudio.Search.SearchMethods.SearchAscession(System.String,System.String,System.Collections.Generic.List{SequenceStudio.DNA}@)">
+            <summary>
+            Searches a list of FASTA sequences for an ascession number entry that matches the input string.
+            The method uses a path to an XML file of FASTASequence Classes and creates and in-memory list
+            of FASTASequence obljects.
+            </summary>
+            <param name="term">a string to search for</param>
+            <param name="inFile">full path to the XML file to search</param>
+            <param name="sl">List(FASTASequence) that is returned with matches, if any</param>
+        </member>
+        <member name="M:SequenceStudio.Search.SearchMethods.SearchSequence(System.String,System.String,System.Collections.Generic.List{SequenceStudio.DNA}@)">
+            <summary>
+            Searches a list of FASTA sequences for a sequence entry that matches the input string.
+            The method uses a path to an XML file of FASTASequence Classes and creates and in-memory list
+            of FASTASequence obljects.
+            </summary>
+            <param name="term">a string to search for; must be a valid DNA sequence</param>
+            <param name="inFile">full path to the XML file to search</param>
+            <param name="sl">List(FASTASequence) that is returned with matches, if any</param>
+        </member>
+        <member name="M:SequenceStudio.Search.SearchMethods.SearchEnumeration(System.String,System.String,System.Collections.Generic.List{SequenceStudio.DNA}@)">
+            <summary>
+            Searches a list of FASTA sequences for an enumeration entry that matches the input string.
+            The method uses a path to an XML file of FASTASequence Classes and creates and in-memory list
+            of FASTASequence obljects.
+            </summary>
+            <param name="term">a string to search for</param>
+            <param name="inFile">full path to the XML file to search</param>
+            <param name="sl">List(FASTASequence) that is returned with matches, if any</param>
+        </member>
+        <member name="M:SequenceStudio.Search.SearchMethods.SearchOrganism(System.String,System.Collections.Generic.List{SequenceStudio.DNA}@)">
+            <summary>
+            Searches a list of FASTASequence obljects for an organsim entry that matches the input string.
+            </summary>
+            <param name="term">a string to search for</param>
+            <param name="dl">List(FASTASequence) that is returned with matches, if any</param>
+        </member>
+        <member name="M:SequenceStudio.Search.SearchMethods.SearchAscession(System.String,System.Collections.Generic.List{SequenceStudio.DNA}@)">
+            <summary>
+            Searches a list of FASTASequence obljects for an ascession number entry that matches the input string.
+            </summary>
+            <param name="term">a string to search for</param>
+            <param name="fl">List(FASTASequence) that is returned with matches, if any</param>
+        </member>
+        <member name="M:SequenceStudio.Search.SearchMethods.SearchDescription(System.String,System.Collections.Generic.List{SequenceStudio.DNA}@)">
+            <summary>
+            Searches a list of FASTASequence obljects for a description entry that matches the input string.
+            </summary>
+            <param name="term">a string to search for</param>
+            <param name="fl">List(FASTASequence) that is returned with matches, if any</param>
+        </member>
+        <member name="M:SequenceStudio.Search.SearchMethods.SearchSequence(System.String,System.Collections.Generic.List{SequenceStudio.DNA}@)">
+            <summary>
+            Searches a list of FASTASequence obljects for a DNA sequence entry that matches the input string.
+            </summary>
+            <param name="term">a string to search for; muat be a valid DNA sequence</param>
+            <param name="fl">List(FASTASequence) that is returned with matches, if any</param>
+        </member>
+        <member name="M:SequenceStudio.Search.SearchMethods.SearchEnumeration(System.String,System.Collections.Generic.List{SequenceStudio.DNA}@)">
+            <summary>
+            Searches a list of FASTASequence obljects for an enumeration entry that matches the input string.
+            </summary>
+            <param name="term">a string to search for</param>
+            <param name="sl">List(FASTASequence) that is returned with matches, if any</param>
+        </member>
+        <member name="M:SequenceStudio.Storage.StorageMethods.XMLfromFASTA(System.String,System.String)">
+            <summary>
+            Creates and saves to disk an XML file from a FASTA *.nt file on disk
+            </summary>
+            <param name="inFile">String, path to a valid FASTA *.nt file</param>
+            <param name="outFile">String, valid path for output XML file</param>
+        </member>
+        <member name="M:SequenceStudio.Storage.StorageMethods.XMLfromFASTASimple(System.String,System.String)">
+            <summary>
+            Creates and saves to disk an XML file from a FASTA *.nt file on disk.
+            This format is a simplified format to accomidate parsing errors.
+            </summary>
+            <param name="inFile">String, path to a valid FASTA *.nt file</param>
+            <param name="outFile">String, valid path for output XML file</param>
+        </member>
+        <member name="M:SequenceStudio.Storage.StorageMethods.DoAllFilestoXML(System.String)">
+            <summary>
+            PRocesses an entir folder with *.nt files into a set of .xml files
+            and stores them in a child \outXML\ folder
+            </summary>
+            <param name="in_folder">String, path to a folder with valid *.nt files</param>
+            <returns>Bolean, false = errors</returns>
+        </member>
+        <member name="M:SequenceStudio.Storage.StorageMethods.SequenceLINQtoXML(System.Collections.Generic.List{SequenceStudio.DNA},System.String)">
+            <summary>
+            Saves a List(FASTASequence) as an XML file
+            </summary>
+            <param name="seqList">List(FASTASequence)</param>
+            <param name="outFile">String, valid path</param>
+        </member>
+        <member name="M:SequenceStudio.Storage.StorageMethods.DNASequenceLINQtoXML(SequenceStudio.DNA,SequenceStudio.DNAStats,System.String)">
+            <summary>
+            Saves a DNASequence class insance as an XML file
+            </summary>
+            <param name="dna">DNASequence class instance</param>
+            <param name="outFile">String, valid path</param>
+        </member>
+        <member name="M:SequenceStudio.Storage.StorageMethods.StoreSequenceDataTable(System.Collections.Generic.List{SequenceStudio.DNA},System.String,System.String)">
+            <summary>
+            Updates the SQL DB with the new rows
+            </summary>
+            <param name="seqList"></param>
+            <param name="dc">List(Type) - the list of the sequence items. Can be any of: FASTASequence, Polypeptide</param>
+            <param name="tblName">The name of the existing DB table</param>
+        </member>
+    </members>
+</doc>

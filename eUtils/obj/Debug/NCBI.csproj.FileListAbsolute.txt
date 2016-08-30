@@ -1,0 +1,14 @@
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\eUtils\bin\Debug\eUtils.dll
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\eUtils\bin\Debug\eUtils.dll.config
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\eUtils\obj\Debug\eUtils.dll
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\eUtils\obj\Debug\eUtils.pdb
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\eUtils\bin\Debug\eUtils.pdb
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\eUtils\obj\Debug\NCBI.csprojResolveAssemblyReference.cache
+F:\#DEVELOPMENT\Sequence Studio\CURRENT\eUtils\bin\Debug\eUtils.dll.config
+F:\#DEVELOPMENT\Sequence Studio\CURRENT\eUtils\bin\Debug\eUtils.dll
+F:\#DEVELOPMENT\Sequence Studio\CURRENT\eUtils\bin\Debug\eUtils.pdb
+F:\#DEVELOPMENT\Sequence Studio\CURRENT\Debug\eUtils.dll.config
+F:\#DEVELOPMENT\Sequence Studio\CURRENT\Debug\eUtils.dll
+F:\#DEVELOPMENT\Sequence Studio\CURRENT\Debug\eUtils.pdb
+F:\#DEVELOPMENT\Sequence Studio\CURRENT\eUtils\obj\Debug\eUtils.dll
+F:\#DEVELOPMENT\Sequence Studio\CURRENT\eUtils\obj\Debug\eUtils.pdb

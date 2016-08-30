@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2e608595-fc1b-40aa-946a-5241fe04089d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://www.ncbi.nlm.nih.gov/soap/v2.0/efetch_seq.wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="efetch_seq.xsd" MetadataType="Schema" ID="9f9fb994-ce37-4e3d-92a7-bd5f5be0aca4" SourceId="1" SourceUrl="http://eutils.ncbi.nlm.nih.gov/soap/v2.0/efetch_seq.xsd" />
+    <MetadataFile FileName="efetch_seq.wsdl" MetadataType="Wsdl" ID="53d4e491-baf4-415c-a3d4-2b58bc3ac6e6" SourceId="1" SourceUrl="http://eutils.ncbi.nlm.nih.gov/soap/v2.0/efetch_seq.wsdl" />
+    <MetadataFile FileName="efetch_db_seq.xsd" MetadataType="Schema" ID="0e66a047-9f19-4ad9-805b-5613f12085c0" SourceId="1" SourceUrl="http://eutils.ncbi.nlm.nih.gov/soap/v2.0/efetch_db_seq.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

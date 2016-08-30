@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b775f7a4-61ec-4ac4-9e40-79b8e6846b31" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://eutils.ncbi.nlm.nih.gov/soap/v2.0/efetch_taxon.wsdl " Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="efetch_db_taxon.xsd" MetadataType="Schema" ID="254df2e9-5ba6-4de9-b1dd-0f47ed45f754" SourceId="1" SourceUrl="http://eutils.ncbi.nlm.nih.gov/soap/v2.0/efetch_db_taxon.xsd" />
+    <MetadataFile FileName="efetch_taxon.xsd" MetadataType="Schema" ID="6a6c58ad-4fce-4b70-a29a-6a6710310366" SourceId="1" SourceUrl="http://eutils.ncbi.nlm.nih.gov/soap/v2.0/efetch_taxon.xsd" />
+    <MetadataFile FileName="efetch_taxon.wsdl" MetadataType="Wsdl" ID="0d500eaf-c2ab-4a62-92d9-e8f521941dfb" SourceId="1" SourceUrl="http://eutils.ncbi.nlm.nih.gov/soap/v2.0/efetch_taxon.wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

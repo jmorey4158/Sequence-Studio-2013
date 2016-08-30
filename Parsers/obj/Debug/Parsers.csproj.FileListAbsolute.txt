@@ -1,0 +1,12 @@
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\Debug\RevealedDesigns.SequenceStudio.Parsers.dll
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\Debug\RevealedDesigns.SequenceStudio.Parsers.pdb
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\Debug\Parsers.XML
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\Parsers\obj\Debug\Parsers.csprojResolveAssemblyReference.cache
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\Parsers\obj\Debug\RevealedDesigns.SequenceStudio.Parsers.dll
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\Parsers\obj\Debug\RevealedDesigns.SequenceStudio.Parsers.pdb
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\Debug\RevealedDesigns.SequenceStudio.Parsers.dll
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\Debug\RevealedDesigns.SequenceStudio.Parsers.pdb
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\Debug\Parsers.XML
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\Parsers\obj\Debug\Parsers.csprojResolveAssemblyReference.cache
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\Parsers\obj\Debug\RevealedDesigns.SequenceStudio.Parsers.dll
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\Parsers\obj\Debug\RevealedDesigns.SequenceStudio.Parsers.pdb

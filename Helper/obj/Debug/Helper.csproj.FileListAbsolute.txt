@@ -1,0 +1,12 @@
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\Debug\RevealedDesigns.SequenceStudio.Helper.dll
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\Debug\RevealedDesigns.SequenceStudio.Helper.pdb
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\Debug\Helper.XML
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\Helper\obj\Debug\Helper.csprojResolveAssemblyReference.cache
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\Helper\obj\Debug\RevealedDesigns.SequenceStudio.Helper.dll
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\Helper\obj\Debug\RevealedDesigns.SequenceStudio.Helper.pdb
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\TestPSValidationPerformance\Internal\RevealedDesigns.SequenceStudio.Helper.dll
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\TestPSValidationPerformance\Internal\RevealedDesigns.SequenceStudio.Helper.pdb
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\TestPSValidationPerformance\Internal\Helper.XML
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\Helper\obj\Debug\Helper.csprojResolveAssemblyReference.cache
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\Helper\obj\Debug\RevealedDesigns.SequenceStudio.Helper.dll
+\\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\Helper\obj\Debug\RevealedDesigns.SequenceStudio.Helper.pdb
