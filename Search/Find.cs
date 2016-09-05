@@ -468,7 +468,7 @@ namespace SequenceStudio
         /// ValuesDescending(Int32,Double);
         /// </dependencies>
         /// <param name="sequence">String - the sequence to be matched against</param>
-        /// <param name="pattern">String - the pattern to match agasint the sequence.</param>
+        /// <param name="pattern">String - the pattern to match against the sequence.</param>
         /// <returns>Dictionary(Int32, Double)- the list of matches found that are >= the threshold.</returns>
         public static Dictionary<Int32, Double> BestMatchesPercentage(String sequence, String pattern)
         {

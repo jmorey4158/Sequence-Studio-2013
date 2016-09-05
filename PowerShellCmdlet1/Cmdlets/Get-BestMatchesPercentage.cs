@@ -44,7 +44,7 @@ namespace SequencePowerShell
 
         [Alias("p")]
         [Parameter(Mandatory = true,
-            HelpMessage = "Provide a valid DNA, RNA, or Poly sequence as a pattern to match agaisnt")]
+            HelpMessage = "Provide a valid DNA, RNA, or Poly sequence as a pattern to match against")]
         [ValidateSequence]
         public string Pattern
         {
@@ -81,7 +81,7 @@ namespace SequencePowerShell
                 else
                 {
                     SequenceException se = new SequenceException();
-                    se.ContextMessage = "Make sure the sequence to ba matched and the pattern to match agasint it are of the same sequnce type.";
+                    se.ContextMessage = "Make sure the sequence to be matched and the pattern to match against it are of the same sequence type.";
                     throw se;
                 }
             }
@@ -105,7 +105,7 @@ namespace SequencePowerShell
                 else 
                 {
                     SequenceException se = new SequenceException();
-                    se.ContextMessage = "Makre sure the sequence to ba matched and the pattern to match agasint it are of the same sequnce type.";
+                    se.ContextMessage = "Make sure the sequence to be matched and the pattern to match against it are of the same sequence type.";
                     throw se;
                 }
             }

@@ -1,0 +1,92 @@
+﻿<?xml version = "1.0" encoding = "utf-8" ?>
+
+<helpItems schema="maml">
+
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" 
+  xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" 
+  xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+  
+  <command:details>
+    <command:name>Get-BestMatchesPercentage</command:name>
+    <maml:description>
+      <maml:para>Returns a MatchSet representing the best match by percentage of all matches between the two sequences.</maml:para>
+    </maml:description>
+    <maml:copyright>Copyright 2013 - Revealed Designs LLC</maml:copyright>
+    <command:verb>Get</command:verb>
+    <command:noun>BestMatchesPercentage</command:noun>
+    <dev:version />
+  </command:details>
+  
+  <maml:description>
+    <maml:para>The Get-BestMatchesPercentage cmdlet returns a MatchSet representing the best match by percentage of all matches between the two sequence strings. You can specify the minimum percentage for a valid match using 'threshold'.</maml:para>
+  </maml:description>
+  
+  <command:syntax>
+    <command:syntaxItem>
+      <maml:name>Get-BestMatchesPercentage</maml:name>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="true" position="named" aliases="s">
+        <maml:name>Sequence</maml:name>
+        <maml:description><maml:para>The sequence string to be compared against the other sequence string - 'Pattern'.</maml:para></maml:description>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="true" position="named" aliases="p">
+        <maml:name>Pattern</maml:name>
+        <maml:description><maml:para>The sequence string to be compared against the other sequence string - 'Sequence'.</maml:para></maml:description>
+      </command:parameter>
+    </command:syntaxItem>  
+    
+    <command:syntaxItem>  
+      <maml:name>Get-BestMatchesPercentage</maml:name>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="true" position="named" aliases="s">
+        <maml:name>Object</maml:name>
+        <maml:description><maml:para>A DNA, RNA, or Polypeptide class instance that contains the sequence string to be compared against the other sequence string - 'Pattern'.</maml:para></maml:description>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="true" position="named" aliases="p">
+        <maml:name>Pattern</maml:name>
+        <maml:description><maml:para>The sequence string to be compared against the other sequence string - 'Object'.</maml:para></maml:description>
+      </command:parameter>      
+    </command:syntaxItem>       
+  </command:syntax>
+  
+  <command:parameters>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named" aliases="">
+      <maml:name>AsJob</maml:name>
+      <maml:description>
+        <maml:para>To get the job results, use the <maml:navigationLink><maml:linkText>Receive-Job</maml:linkText><maml:uri></maml:uri></maml:navigationLink> cmdlet.</maml:para>
+      </maml:description>
+    </command:parameter>
+  </command:parameters>
+
+  
+  <command:inputTypes>
+    <!--Add input type information here-->
+  </command:inputTypes>
+  
+  
+  <command:returnValues>
+    <!--Add return value information here-->
+  </command:returnValues>
+  
+  
+  <maml:alertSet>
+    <!--Add Note information here-->
+  </maml:alertSet>
+  
+  
+  <command:examples>
+    <!--Add cmdlet examples here-->
+  </command:examples>
+  
+  
+  <maml:relatedLinks>
+    <!--Add links to related content here-->
+  </maml:relatedLinks>
+
+</command:command>
+
+
+
+
+
+
+</helpItems>
+
