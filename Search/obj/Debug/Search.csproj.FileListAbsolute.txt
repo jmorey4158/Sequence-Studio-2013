@@ -10,3 +10,6 @@ E:\#DEVELOPMENT\Sequence Studio\CURRENT\Search\obj\Debug\RevealedDesigns.Sequenc
 \\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\Search\obj\Debug\Search.csprojResolveAssemblyReference.cache
 \\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\Search\obj\Debug\RevealedDesigns.SequenceStudio.Search.dll
 \\TK5-RED-MDS-08Z\MyDocs3\jmorey\Documents\Visual Studio 2013\Projects\Sequence Studio\CURRENT\Search\obj\Debug\RevealedDesigns.SequenceStudio.Search.pdb
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\Sequence-Studio-2013\Search\obj\Debug\Search.csprojResolveAssemblyReference.cache
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\Sequence-Studio-2013\Search\obj\Debug\RevealedDesigns.SequenceStudio.Search.dll
+E:\#DEVELOPMENT\Sequence Studio\CURRENT\Sequence-Studio-2013\Search\obj\Debug\RevealedDesigns.SequenceStudio.Search.pdb
